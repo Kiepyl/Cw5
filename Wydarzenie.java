@@ -15,13 +15,10 @@ public class Wydarzenie {
     public void wyswietlinfo(String nazwa, double cena, String data, String miejsce) {
         System.out.println(nazwa + cena + data + miejsce);
     }
-    public String toString(){
-
-    }
 
     public String getNazwa() {
         return nazwa;
-    }
+    }WQ
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
