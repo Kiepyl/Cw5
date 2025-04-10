@@ -6,19 +6,41 @@ public class Wydarzenie {
     private int dostepneMiejsca = 0;
     private double cena;
 
-    public void wyswietlinfo(String nazwa, double cena) {
-        System.out.println(nazwa + cena);
+    public Wydarzenie(String nazwa, double cena) {
+        this.nazwa = nazwa;
+        this.cena = cena;
     }
-    public void wyswietlinfo(String nazwa, double cena, String data) {
-        System.out.println(nazwa + cena + data);
+    public Wydarzenie(String nazwa, double cena, String data) {
+        this.nazwa = nazwa;
+        this.cena = cena;
+        this.data = data;
     }
-    public void wyswietlinfo(String nazwa, double cena, String data, String miejsce) {
-        System.out.println(nazwa + cena + data + miejsce);
+    public Wydarzenie(String nazwa, double cena, String data, String miejsce) {
+        this.nazwa = nazwa;
+        this.cena = cena;
+        this.data = data;
+        this.miejsce = miejsce;
+    }
+
+    @Override
+    public String toString() {
+        return "Wydarzenie{" +
+                "nazwa='" + nazwa + '\'' +
+                ", data='" + data + '\'' +
+                ", miejsce='" + miejsce + '\'' +
+                ", maxLiczbaMiejsc=" + maxLiczbaMiejsc +
+                ", dostepneMiejsca=" + dostepneMiejsca +
+                ", cena=" + cena +
+                '}';
+    }
+
+    public void zarezerwujMiejsce(){
+        dostepneMiejsca--;
     }
 
     public String getNazwa() {
         return nazwa;
-    }WQ
+    }
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
     }
